@@ -11,3 +11,5 @@ http://goodies.xfce.org/projects/thunar-plugins/thunar-shares-plugin
 
 Pacote compilado e embalado por: Stefano Capitani <stefano@manjaro.org>
 Convertido e empacotado em .deb, "debian_firmware-9.4.0-amd64" por: Elppans Dark Elven <anonymous@anonymous>
+
+http://mirror.ventraip.net.au/Manjaro/stable/community/x86_64/thunar-shares-plugin-0.2.0.git-5-x86_64.pkg.tar.xz
