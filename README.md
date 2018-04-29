@@ -99,6 +99,16 @@ sudo gpasswd sambashare -a $USER
 
 # Instalando o pacote:
 
+Como o XFCE está instalado, provavelmente o Thunar também já está, então veja se o pacote samba está instalado:
+
+dpkg -l samba* | grep ^ii
+
+Se não estiver instalado, instale:
+
+apt-get install samba
+
+Com a dependência satisfeita (thunar + samba), baixe e instale o pacote thunar-shares-plugin
+
 wget https://github.com/elppans/thunar-shares-plugin/raw/master/thunar-shares-plugin-0.2.0.git-5_amd64.deb
 
 dpkg -i thunar-shares-plugin-0.2.0.git-5_amd64.deb
