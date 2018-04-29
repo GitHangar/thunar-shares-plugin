@@ -7,6 +7,16 @@ Package compiled and packaged by: Stefano Capitani <stefano@manjaro.org>
 
 Converted and packaged to .deb, "debian_firmware-9.4.0-amd64" by: Elppans Dark Elven <anonymous@anonymous>
 
+Source Code Author of version 0.2.0: Daniel Morales <daniel@daniel.com.uy>
+
+Link of all those responsible: https://git.xfce.org/thunar-plugins/thunar-shares-plugin/
+
+XFCE Link Github: https://git.xfce.org/
+
+Report BUG: https://bugzilla.xfce.org/
+
+XFCE Project: https://xfce.org/
+
 # Sobre thunar-shares-plugin (pt_BR):
 
 Thunar plugin para compartilhar rapidamente uma pasta usando o Samba sem exigir acesso root
@@ -16,6 +26,16 @@ http://goodies.xfce.org/projects/thunar-plugins/thunar-shares-plugin
 Pacote compilado e embalado por: Stefano Capitani <stefano@manjaro.org>
 
 Convertido e empacotado em .deb, "debian_firmware-9.4.0-amd64" por: Elppans Dark Elven <anonymous@anonymous>
+
+Autor do Código Fonte da versão 0.2.0: Daniel Morales <daniel@daniel.com.uy>
+
+Link de todos os responsáveis: https://git.xfce.org/thunar-plugins/thunar-shares-plugin/
+
+Link Github do XFCE: https://git.xfce.org/
+
+Reportar BUG: https://bugzilla.xfce.org/
+
+Projeto XFCE: https://xfce.org/
 
 Link original: http://mirror.ventraip.net.au/Manjaro/stable/community/x86_64/thunar-shares-plugin-0.2.0.git-5-x86_64.pkg.tar.xz
 
