@@ -35,18 +35,28 @@ Para usar, verifique primeiro se seu sistema está configurado. Se não estiver 
 # Samba Share:
 
 sudo mkdir -p /var/lib/samba/usershare
+
 sudo groupadd -r sambashare
+
 sudo chown root:sambashare /var/lib/samba/usershare
+
 sudo chmod 1770 /var/lib/samba/usershare
+
 
 # Habilite ou adicione no arquivo /etc/samba/smb.conf:
 
 name resolve order = wins lmhosts hosts bcast
+
 usershare path = /var/lib/samba/usershare
+
 usershare max shares = 100
+
 usershare owner only = false
+
 usershare allow guests = yes
+
 force group = sambashare
+
 
 # Modifique a linha "hosts" em /etc/nsswitch.conf para ficar desta forma:
 
