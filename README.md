@@ -7,7 +7,7 @@ Package compiled and packaged by: Stefano Capitani <stefano@manjaro.org>
 
 Converted and packaged to .deb, "debian_firmware-9.4.0-amd64" by: Elppans Dark Elven <anonymous@anonymous>
 
-# pt-BR:
+# Sobre thunar-shares-plugin (pt_BR):
 
 Thunar plugin para compartilhar rapidamente uma pasta usando o Samba sem exigir acesso root
 
@@ -76,6 +76,14 @@ hosts: files mdns4_minimal [NOTFOUND=return] wins dns mdns4
 # Adicionae o seu usuário ao grupo sambashare:
 
 sudo gpasswd sambashare -a $USER
+
+# Instalando o pacote:
+
+wget https://github.com/elppans/thunar-shares-plugin/raw/master/thunar-shares-plugin-0.2.0.git-5_amd64.deb
+
+dpkg -i thunar-shares-plugin-0.2.0.git-5_amd64.deb
+
+# Compartilhando pastas
 
 Após a configuração, para compartilhar basta clicar com o botão direito em qualquer pasta e em "Propriedades > Compartilhar" (como usuário normal)
 
