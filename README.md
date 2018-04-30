@@ -63,15 +63,47 @@ http://goodies.xfce.org/projects/thunar-plugins/thunar-shares-plugin
 
 Para usar, verifique primeiro se seu sistema está configurado. Se não estiver faça as seguintes alterações (como super usuário):
 
+# Instalando o pacote:
+
+Como o XFCE está instalado, provavelmente o Thunar também já está, então veja se o pacote samba está instalado:
+
+dpkg -l samba* | grep ^ii
+
+Se não estiver instalado, instale:
+
+apt-get install samba
+
+Com a dependência satisfeita (thunar + samba), baixe e instale o pacote thunar-shares-plugin
+
+wget https://github.com/elppans/thunar-shares-plugin/raw/master/thunar-shares-plugin-0.2.0.git-5_amd64.deb
+
+dpkg -i thunar-shares-plugin-0.2.0.git-5_amd64.deb
+
+# Adicione o seu usuário ao grupo sambashare:
+
+Verifique se existe o grupo e se o usuário já está nele:
+
+grep sambashare /etc/group
+
+Se o grupo não existir, crie:
+
+groupadd -r sambashare
+
+Se seu usuário não estiver no grupo, adicione:
+
+gpasswd sambashare -a $USER
+
+
+# Faça um teste e veja se já funciona a partir daí. Se não, faça as seguintes configurações (como super usuário):
+
+
 # Samba Share:
 
-sudo mkdir -p /var/lib/samba/usershare
+mkdir -p /var/lib/samba/usershare
 
-sudo groupadd -r sambashare
+chown root:sambashare /var/lib/samba/usershare
 
-sudo chown root:sambashare /var/lib/samba/usershare
-
-sudo chmod 1770 /var/lib/samba/usershare
+chmod 1770 /var/lib/samba/usershare
 
 
 # Habilite ou adicione no arquivo /etc/samba/smb.conf:
@@ -93,28 +125,8 @@ force group = sambashare
 
 hosts: files mdns4_minimal [NOTFOUND=return] wins dns mdns4
 
-# Adicionae o seu usuário ao grupo sambashare:
+# Compartilhando pastas (como usuário normal)
 
-sudo gpasswd sambashare -a $USER
-
-# Instalando o pacote:
-
-Como o XFCE está instalado, provavelmente o Thunar também já está, então veja se o pacote samba está instalado:
-
-dpkg -l samba* | grep ^ii
-
-Se não estiver instalado, instale:
-
-apt-get install samba
-
-Com a dependência satisfeita (thunar + samba), baixe e instale o pacote thunar-shares-plugin
-
-wget https://github.com/elppans/thunar-shares-plugin/raw/master/thunar-shares-plugin-0.2.0.git-5_amd64.deb
-
-dpkg -i thunar-shares-plugin-0.2.0.git-5_amd64.deb
-
-# Compartilhando pastas
-
-Após a configuração, para compartilhar basta clicar com o botão direito em qualquer pasta e em "Propriedades > Compartilhar" (como usuário normal)
+Após a configuração, para compartilhar basta clicar com o botão direito em qualquer pasta e em "Propriedades > Compartilhar" 
 
 ![alt text](https://i.imgur.com/uagjJW2.png)
